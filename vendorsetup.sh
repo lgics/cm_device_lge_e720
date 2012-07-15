@@ -1,0 +1,2 @@
+add_lunch_combo cm_e720-eng
+add_lunch_combo cm_e720-userdebug
