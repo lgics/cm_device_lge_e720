@@ -6,7 +6,6 @@
 ## RIL
 lib/libril-qc-1.so
 lib/libril.so
-bin/rild
 lib/liboncrpc.so
 lib/libdsm.so
 lib/libqueue.so
@@ -61,7 +60,7 @@ etc/wl/rtecdc-mfgtest.bin
 ## HAL
 bin/ami304d
 lib/hw/sensors.e720.so
-lib/hw/camera.msm7x27.so
+lib/hw/lights.msm7x27.so
 
 # LGE services
 

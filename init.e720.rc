@@ -1,0 +1,32 @@
+# inherit qcom init
+import init.qcom.rc
+
+on boot
+
+## VIBRATOR
+    chmod 0666 /sys/class/timed_output/vibrator/amp
+## SENSOR
+	setprop ro.hardware AMIT
+	chown system system /dev/ami304
+	chmod 0666 dev/ami304
+	chown system system /dev/ami304daemon
+	chmod 0666 dev/ami304daemon
+	chown system system /dev/ami304hal
+	chmod 0666 dev/ami304hal
+	mkdir /data/amit 0770 ami304d ami304d
+# LG_FW_LAB2_SENSOR	
+	chown system system /dev/KR3DM
+	chmod 0666 /dev/KR3DM
+#	chown system system /dev/KR3DH
+#	chmod 0666 /dev/KR3DH
+# LG_FW_LAB2_ALESSI	
+	chmod 0666 /sys/class/leds/button-backlight/brightness	
+	chmod 0666 /sys/class/leds/lcd-backlight/alc
+## PROXIMITY SENSOR
+	chmod 0666 /sys/bus/i2c/drivers/apds9801/5-0055/enable
+
+service ami304d /system/bin/ami304d
+    class main
+    user compass
+    group system
+

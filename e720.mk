@@ -13,11 +13,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     $(LOCAL_PATH)/configs/touch_mcs6000.idc:system/usr/idc/touch_mcs6000.idc \
 
-
 # Ambient sensor light
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml 
+    frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml 
 
+# e720 init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init.e720.rc:root/init.e720.rc \
+    $(LOCAL_PATH)/ueventd.e720.rc:root/ueventd.e720.rc
 
 # Wi-Fi
 PRODUCT_COPY_FILES += \
